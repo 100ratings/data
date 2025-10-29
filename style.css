@@ -1,0 +1,24 @@
+/* Remove margens e garante tela cheia */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  overflow: hidden;
+  touch-action: manipulation; /* Melhor toque no mobile */
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* A imagem ocupa toda a tela, centralizada */
+#screenshot {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+}
