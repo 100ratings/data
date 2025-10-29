@@ -1,24 +1,28 @@
-/* Remove margens e garante tela cheia */
+/* Reset geral */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Corpo ocupa a tela inteira */
 html, body {
   height: 100%;
   width: 100%;
-  background-color: #000000;
+  background-color: #000000; /* fundo escuro como iOS */
   overflow: hidden;
-  touch-action: manipulation; /* Melhor toque no mobile */
+  touch-action: manipulation;
   -webkit-user-select: none;
   user-select: none;
+  -webkit-tap-highlight-color: transparent; /* remove efeito cinza ao tocar */
 }
 
-/* A imagem ocupa toda a tela, centralizada */
+/* Imagem principal */
 #screenshot {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
   display: block;
+  background-color: #000000; /* evita flash ao trocar imagem */
+  transition: none; /* sem transição visível */
 }
