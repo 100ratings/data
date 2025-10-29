@@ -1,22 +1,21 @@
-// Lista das imagens na ordem
 const imagens = [
   "img/01.PNG",
   "img/02.PNG",
   "img/03.PNG"
 ];
 
-// Começa pela primeira imagem
+// Começa com o índice da imagem que já está no HTML
 let indiceAtual = 0;
 
 // Referência ao elemento <img>
 const img = document.getElementById("screenshot");
 
-// Função que troca para a próxima imagem
+// Troca para a próxima imagem ao clicar ou tocar
 function mostrarProximaImagem() {
   indiceAtual = (indiceAtual + 1) % imagens.length;
   img.src = imagens[indiceAtual];
 }
 
-// Evento de clique ou toque
+// Eventos de clique e toque
 document.addEventListener("click", mostrarProximaImagem);
 document.addEventListener("touchstart", mostrarProximaImagem);
